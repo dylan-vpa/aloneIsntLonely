@@ -60,15 +60,15 @@ public class AutoCinematicManager : MonoBehaviour
         
         switch (sceneName)
         {
-            case "Cinematic1":
+            case "cinematic1":
                 currentVideoIndex = 0;
                 PlayVideo(0);
                 break;
-            case "Cinematic2":
+            case "cinematic2":
                 currentVideoIndex = 1;
                 PlayVideo(1);
                 break;
-            case "Cinematic3":
+            case "cinematic3":
                 currentVideoIndex = 2;
                 PlayVideo(2);
                 break;
