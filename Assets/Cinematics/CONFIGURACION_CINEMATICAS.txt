@@ -1,0 +1,70 @@
+🎬 CONFIGURACIÓN DE CINEMÁTICAS - FLUJO COMPLETO
+================================================
+
+📋 FLUJO ACTUALIZADO:
+MainMenu → Cinematic1 → Level1 → Cinematic2 → Level2 → Cinematic3 → EndMenu
+
+🔧 CONFIGURACIÓN EN UNITY:
+
+1️⃣ CONFIGURAR CINEMATIC1:
+   - Abrir escena: Assets/Scenes/Cinematic/cinematic1.unity
+   - Crear Canvas (UI → Canvas)
+   - Canvas Scaler: Scale With Screen Size, 1920x1080
+   
+   - Crear VideoPlayer:
+     * Right click → Video → Video Player
+     * Source: Video Clip
+     * Video Clip: video1.mp4
+     * Play On Awake: ✅
+     * Loop: ❌
+   
+   - Crear RawImage:
+     * Right click en Canvas → UI → RawImage
+     * Stretch: Fill
+   
+   - Crear Render Texture:
+     * Assets → Create → Render Texture
+     * Size: 1920x1080
+     * Asignar al VideoPlayer y RawImage
+   
+   - Crear GameObject vacío: "CinematicManager"
+   - Agregar script: AutoCinematicManager.cs
+   - Asignar referencias:
+     * Video Player: VideoPlayer
+     * Video Display: RawImage
+     * Cinematic Videos: [video1.mp4, video2.mp4, video3.mp4]
+   
+   - Crear botón Skip (opcional):
+     * Right click en Canvas → UI → Button
+     * Text: "Saltar (S)"
+     * Asignar al Skip Button del script
+
+2️⃣ CONFIGURAR CINEMATIC2:
+   - Abrir escena: Assets/Scenes/Cinematic/cinematic2.unity
+   - Misma configuración que Cinematic1
+   - Video Clip: video2.mp4
+
+3️⃣ CONFIGURAR CINEMATIC3:
+   - Abrir escena: Assets/Scenes/Cinematic/cinematic3.unity
+   - Misma configuración que Cinematic1
+   - Video Clip: video3.mp4
+
+4️⃣ VERIFICAR BUILD SETTINGS:
+   - File → Build Settings
+   - Orden correcto:
+     0: MainMenu
+     1: Cinematic1
+     2: Level1
+     3: Cinematic2
+     4: Level2
+     5: Cinematic3
+     6: EndMenu
+
+✅ FUNCIONALIDAD:
+- Los videos se reproducen automáticamente
+- Al terminar cada video, pasa al siguiente nivel
+- Botón skip disponible después de 2 segundos
+- Transiciones suaves entre escenas
+
+🎯 RESULTADO:
+MainMenu → [Video1] → Level1 → [Video2] → Level2 → [Video3] → EndMenu

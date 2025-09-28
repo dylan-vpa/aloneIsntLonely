@@ -212,18 +212,18 @@ public class GameManager : MonoBehaviour
             levelNumber = 2;
         }
         
-        // Cargar siguiente nivel o menú final
+        // Cargar siguiente cinemática o menú final
         if (levelNumber == 1)
         {
-            // Level1 completado - Ir a Level2
-            Debug.Log("Level1 completado! Cargando Level2...");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+            // Level1 completado - Ir a Cinematic2 (intermedio)
+            Debug.Log("Level1 completado! Cargando Cinematic2...");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Cinematic2");
         }
         else if (levelNumber == 2)
         {
-            // Level2 completado - Ir a EndMenu
-            Debug.Log("Level2 completado! Cargando EndMenu...");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("EndMenu");
+            // Level2 completado - Ir a Cinematic3 (final)
+            Debug.Log("Level2 completado! Cargando Cinematic3...");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Cinematic3");
         }
     }
 }

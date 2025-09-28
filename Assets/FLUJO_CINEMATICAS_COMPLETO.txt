@@ -1,0 +1,37 @@
+🎬 FLUJO DE CINEMÁTICAS CONFIGURADO COMPLETAMENTE
+================================================
+
+✅ CAMBIOS REALIZADOS:
+
+1️⃣ MENU PRINCIPAL:
+   - StartGame() ahora carga Cinematic1 en lugar de Level1
+   - SimpleButton.cs actualizado para usar cinemáticas
+
+2️⃣ GAME MANAGER:
+   - OnLevelComplete() actualizado para cargar cinemáticas:
+     * Level1 completado → Cinematic2
+     * Level2 completado → Cinematic3
+
+3️⃣ NUEVO SCRIPT CREADO:
+   - AutoCinematicManager.cs: Maneja automáticamente los videos
+   - Detecta la escena actual y reproduce el video correspondiente
+   - Transiciones automáticas al siguiente nivel
+
+📋 FLUJO FINAL:
+MainMenu → Cinematic1 → Level1 → Cinematic2 → Level2 → Cinematic3 → EndMenu
+
+🔧 CONFIGURACIÓN NECESARIA EN UNITY:
+
+1. Abrir cada escena de cinemática (Cinematic1, Cinematic2, Cinematic3)
+2. Crear Canvas con VideoPlayer y RawImage
+3. Asignar el script AutoCinematicManager.cs
+4. Asignar los videos correspondientes
+5. Verificar que las escenas estén en Build Settings
+
+🎯 RESULTADO:
+- Los videos se reproducen automáticamente
+- Al terminar cada video, pasa al siguiente nivel
+- Botón skip disponible (opcional)
+- Flujo completo funcionando
+
+¡LISTO PARA PROBAR! 🚀

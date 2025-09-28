@@ -62,7 +62,7 @@ public class MenuManager : MonoBehaviour
         if (isTransitioning) return;
         
         Debug.Log("Iniciando juego...");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Cinematic1");
     }
     
     public void RestartGame()

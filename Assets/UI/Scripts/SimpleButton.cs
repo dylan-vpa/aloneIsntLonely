@@ -119,15 +119,15 @@ public class SimpleButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
         }
         else
         {
-            // Si no hay MenuManager, cargar Level1 directamente
+            // Si no hay MenuManager, cargar Cinematic1 directamente
             SceneTransitionManager transitionManager = SceneTransitionManager.Instance;
             if (transitionManager != null)
             {
-                transitionManager.LoadLevel1();
+                transitionManager.LoadIntroCinematic();
             }
             else
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Cinematic1");
             }
         }
     }
