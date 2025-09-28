@@ -478,7 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 584588508}
   targetTag: Player
-  followSpeed: 5
+  followSpeed: 10
   offset: {x: 0, y: 0, z: -10}
   centerOnTarget: 1
   useBounds: 1

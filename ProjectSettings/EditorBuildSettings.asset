@@ -9,19 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/MainMenu.unity
     guid: 45bb603696bbf9ae1a7f997032041a8b
   - enabled: 1
-    path: Assets/Scenes/Cinematic/cinematic1.unity
+    path: Assets/Scenes/Menus/Cinematic/cinematic1.unity
     guid: df9770ae7716ec24a8ee8f93526b1164
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: dcdaa1d3d0b26948cb69795995cb7db0
   - enabled: 1
-    path: Assets/Scenes/Cinematic/cinematic2.unity
+    path: Assets/Scenes/Menus/Cinematic/cinematic2.unity
     guid: 9cc5f895cc17d8e4e8d90899aae5dad3
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
     guid: 790db99e24006964bbb766474e464430
   - enabled: 1
-    path: Assets/Scenes/Cinematic/cinematic3.unity
+    path: Assets/Scenes/Menus/Cinematic/cinematic3.unity
     guid: 6b2717dc53939bf4d8a634f84b3e196f
   - enabled: 1
     path: Assets/Scenes/Menus/EndMenu.unity
