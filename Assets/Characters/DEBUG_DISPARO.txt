@@ -1,0 +1,53 @@
+DEBUG: CÓMO SOLUCIONAR QUE NO SE VEN LOS DISPAROS
+
+PASO 1 - VERIFICAR LA CONFIGURACIÓN:
+1. Presiona Play
+2. Haz click derecho
+3. Mira la consola de Unity
+4. Deberías ver mensajes como:
+   - "¡Click derecho detectado! Intentando disparar..."
+   - "Posición del mouse en el mundo: (x, y, z)"
+   - "Proyectil creado: Projectile"
+
+PASO 2 - PROBLEMAS COMUNES:
+
+PROBLEMA: "No hay prefab de proyectil asignado!"
+SOLUCIÓN:
+- Ve al Inspector del personaje
+- En PlayerShooting, arrastra el prefab Projectile al campo "Projectile Prefab"
+
+PROBLEMA: "No se pudo obtener la posición del mouse!"
+SOLUCIÓN:
+- Verifica que la cámara esté configurada correctamente
+- Asegúrate de que la cámara tenga el tag "MainCamera"
+
+PROBLEMA: "Proyectil creado" pero no se ve
+SOLUCIÓN:
+- Verifica que el prefab Projectile tenga un SpriteRenderer
+- Verifica que el sprite esté configurado correctamente
+- Verifica que el proyectil no esté muy pequeño
+
+PASO 3 - CONFIGURACIÓN CORRECTA DEL PROYECTIL:
+1. Crea el prefab Projectile:
+   - Arrastra power.png a la escena
+   - Añade SpriteRenderer
+   - Añade Rigidbody2D (Gravity Scale = 0)
+   - Añade CircleCollider2D (Is Trigger = ✓)
+   - Añade script Projectile
+   - Tag: "Projectile"
+   - Arrastra a Assets/Characters/Prefabs/
+   - Elimina de la escena
+
+2. Asigna el prefab al personaje:
+   - Selecciona el personaje
+   - En PlayerShooting, arrastra el prefab al campo "Projectile Prefab"
+
+PASO 4 - VERIFICAR TAGS:
+- Ve a Edit > Project Settings > Tags and Layers
+- Asegúrate de que existan estos tags:
+  * "Player"
+  * "Projectile"
+  * "Enemy"
+  * "Obstacle"
+
+¡Sigue estos pasos y los disparos deberían aparecer!

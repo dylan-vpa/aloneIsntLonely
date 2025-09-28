@@ -1,0 +1,44 @@
+VERIFICAR CONFIGURACIÓN DEL PREFAB DEL PROYECTIL
+
+PROBLEMA: El proyectil no se mueve
+
+SOLUCIÓN PASO A PASO:
+
+1. VERIFICAR EL PREFAB:
+   - Ve a Assets/Characters/Prefabs/
+   - Selecciona el prefab Projectile
+   - Verifica que tenga estos componentes:
+     * SpriteRenderer (con power.png)
+     * Rigidbody2D
+     * CircleCollider2D (Is Trigger = ✓)
+     * Script Projectile
+
+2. CONFIGURAR RIGIDBODY2D:
+   - Body Type: Dynamic
+   - Gravity Scale: 0
+   - Linear Drag: 0
+   - Angular Drag: 0
+   - Freeze Rotation: ✓ (X e Y) 
+   - Freeze Position: ✗ (ninguno)
+
+3. CONFIGURAR COLLIDER2D:
+   - Is Trigger: ✓
+   - Size: (1, 1) - ajustar según el sprite
+   - Center: (0, 0, 0)
+
+4. CONFIGURAR SCRIPT PROJECTILE:
+   - Speed: 10
+   - Lifetime: 5
+   - Damage: 1
+
+5. VERIFICAR EN LA ESCENA:
+   - Arrastra el prefab a la escena
+   - Presiona Play
+   - Deberías ver el proyectil moverse
+
+6. SI NO FUNCIONA:
+   - Verifica que el prefab tenga Rigidbody2D
+   - Verifica que el Rigidbody2D esté configurado correctamente
+   - Verifica que el script Projectile esté asignado
+
+¡El problema suele estar en la configuración del Rigidbody2D!

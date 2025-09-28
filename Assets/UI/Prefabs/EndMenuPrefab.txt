@@ -1,0 +1,48 @@
+🎮 PREFAB DEL MENÚ FINAL
+=========================
+
+📋 CONFIGURACIÓN EN UNITY:
+
+1️⃣ CREAR CANVAS:
+   - Crear Canvas (UI → Canvas)
+   - Canvas Scaler: Scale With Screen Size
+   - Reference Resolution: 1920x1080
+   - Screen Match Mode: Match Width Or Height
+
+2️⃣ CREAR FONDO:
+   - Crear Image (UI → Image)
+   - Nombre: "Background"
+   - Asignar thanks.jpeg como Source Image
+   - Stretch: Fill
+   - Color: Blanco (255, 255, 255, 255)
+
+3️⃣ CREAR BOTÓN INVISIBLE:
+   - Crear Image (UI → Image)
+   - Nombre: "ClickArea"
+   - Color: Transparente (0, 0, 0, 0)
+   - Stretch: Fill
+   - Agregar componente: SimpleButton.cs
+   - Button Type: "restart"
+
+4️⃣ CREAR FADE IMAGE:
+   - Crear Image (UI → Image)
+   - Nombre: "FadeImage"
+   - Color: Negro (0, 0, 0, 255)
+   - Stretch: Fill
+   - Desactivar inicialmente
+
+5️⃣ CONFIGURAR MENU MANAGER:
+   - Crear GameObject vacío: "MenuManager"
+   - Agregar script: MenuManager.cs
+   - Asignar referencias:
+     * End Menu Screen: Canvas
+     * Fade Image: FadeImage
+
+6️⃣ GUARDAR COMO PREFAB:
+   - Arrastrar Canvas a Assets/UI/Prefabs/
+   - Nombre: "EndMenuPrefab"
+
+🎯 FUNCIONALIDAD:
+- Click en cualquier parte reinicia el juego
+- Transición suave con fade
+- Vuelve al Level1

@@ -1,0 +1,37 @@
+CÓMO CENTRAR EL PERSONAJE EN LA CÁMARA
+
+1. CONFIGURAR LA CÁMARA:
+   - Selecciona Main Camera
+   - Position: (0, 0, -10)
+   - Rotation: (0, 0, 0)
+   - Scale: (1, 1, 1)
+   - Projection: Orthographic
+   - Size: 5
+
+2. AÑADIR CAMERAFOLLOW:
+   - Añade el componente "CameraFollow"
+   - Target: DEJAR VACÍO
+   - Target Tag: "Player"
+   - Follow Speed: 5
+   - Center On Target: ✓ (activado)
+   - Use Bounds: ✗ (desactivado para centrado libre)
+   - Min X: -20, Max X: 20 (límites amplios)
+   - Min Y: -20, Max Y: 20 (límites amplios)
+
+3. VERIFICAR EL PERSONAJE:
+   - Tag: "Player"
+   - Position: (0, 0, 0) para empezar
+   - Debe tener Rigidbody2D y BoxCollider2D
+
+4. PROBAR:
+   - Presiona Play
+   - El personaje debe estar centrado en la pantalla
+   - Al moverte, la cámara debe seguir manteniendo el personaje centrado
+
+5. SI NO FUNCIONA:
+   - Verifica que el personaje tenga tag "Player"
+   - Verifica que la cámara tenga el script CameraFollow
+   - Verifica que Center On Target esté activado
+   - Ajusta el Follow Speed si se mueve muy lento/rápido
+
+¡El personaje ahora debería estar perfectamente centrado!

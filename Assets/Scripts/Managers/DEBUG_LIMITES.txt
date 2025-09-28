@@ -1,0 +1,33 @@
+DEBUG: CÓMO SOLUCIONAR LOS LÍMITES QUE NO FUNCIONAN
+
+OPCIÓN 1 - USAR SCENEBOUNDS CON DEBUG:
+1. Asegúrate de que SceneBounds esté en un GameObject activo
+2. Verifica que el personaje tenga tag "Player"
+3. Presiona Play y mira la consola
+4. Deberías ver mensajes como "Jugador encontrado" y "Límite alcanzado"
+5. Si no ves mensajes, el script no está funcionando
+
+OPCIÓN 2 - USAR SIMPLEBOUNDS (MÁS SIMPLE):
+1. Crea un GameObject vacío llamado "SimpleBounds"
+2. Añade el componente "SimpleBounds"
+3. Añade un BoxCollider2D
+4. Configura el BoxCollider2D:
+   * Is Trigger: ✓ (activado)
+   * Size: (16, 12) - ajusta según tus límites
+   * Center: (0, 0, 0)
+5. Configura SimpleBounds:
+   * Left Bound: -8
+   * Right Bound: 8
+   * Top Bound: 6
+   * Bottom Bound: -6
+   * Show Debug: ✓
+
+VERIFICACIÓN:
+- ¿El personaje tiene tag "Player"?
+- ¿El GameObject con el script está activo?
+- ¿Los límites están configurados correctamente?
+- ¿Ves las líneas rojas en el Scene View?
+
+SOLUCIÓN RÁPIDA:
+- Usa SimpleBounds con BoxCollider2D como trigger
+- Es más confiable que verificar posición cada frame

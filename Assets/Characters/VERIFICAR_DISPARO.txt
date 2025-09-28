@@ -1,0 +1,40 @@
+VERIFICACIÓN PASO A PASO - ¿POR QUÉ NO FUNCIONA?
+
+PASO 1 - VERIFICAR QUE EL SCRIPT ESTÉ FUNCIONANDO:
+1. Presiona Play
+2. Mira la consola de Unity (Window > General > Console)
+3. Deberías ver estos mensajes:
+   - "PlayerShooting iniciado!"
+   - "Cámara encontrada: True"
+   - "FirePoint creado automáticamente"
+   - "Prefab asignado: True" o "False"
+
+PASO 2 - SI VES "Prefab asignado: False":
+SOLUCIÓN:
+1. Crea el prefab del proyectil:
+   - Arrastra power.png a la escena
+   - Renombra a "Projectile"
+   - Añade SpriteRenderer
+   - Añade Rigidbody2D (Gravity Scale = 0)
+   - Añade CircleCollider2D (Is Trigger = ✓)
+   - Añade script Projectile
+   - Tag: "Projectile"
+   - Arrastra a Assets/Characters/Prefabs/
+   - Elimina de la escena
+
+2. Asigna el prefab:
+   - Selecciona tu personaje
+   - En PlayerShooting, arrastra el prefab al campo "Projectile Prefab"
+
+PASO 3 - VERIFICAR EL INPUT:
+1. Haz click derecho
+2. Deberías ver "CLICK DERECHO DETECTADO!" en la consola
+3. Si no ves este mensaje, el problema es el input
+
+PASO 4 - VERIFICAR LA CONFIGURACIÓN:
+- ¿El personaje tiene el script PlayerShooting?
+- ¿El prefab está asignado?
+- ¿La consola está abierta?
+- ¿Use Right Click está activado?
+
+¡SIGUE ESTOS PASOS Y DIME QUÉ MENSAJES VES EN LA CONSOLA!
